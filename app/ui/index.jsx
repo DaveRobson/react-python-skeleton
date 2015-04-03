@@ -1,6 +1,15 @@
 /** @jsx React.DOM */
 'use strict'
-var React = require('react')
-var Hello = require('./hello')
+var Header = require('./partials/header')
 
-React.render(<Hello />, document.getElementById('content'))
+var App = React.createClass({
+    render: function() {
+        return (
+            <div className = "app">
+                <Header />
+            </div>
+        )
+    }
+})
+
+React.render(<App />, document.body)
